@@ -10,14 +10,16 @@ else
 {
     <table class="table">
         <tr>
-            <th>Id
+            <th>Id</th>
             <th>Employer</th>
+            <th>Location</th>
         </tr>
         @foreach (Employer employer in Model)
         {
             <tr>
                 <td>@employer.Id</td>
                 <td><a asp-controller="Employer" asp-action="About" asp-route-id="@employer.Id">@employer.Name</a></td>
+                <td><a asp-controller="Employer" asp-action="About" asp-route-id="@employer.Id">@employer.Location</a></td>
             </tr>
         }
     </table>
